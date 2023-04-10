@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 const UserProfileMenu = () => {
   return (
-    <div className="flex justify-end -mt-2">
+    <div className="flex justify-end -mt-2 w-screen">
 <div
     className="z-50 my-4 w-56  mx-2 text-base list-none bg-white rounded divide-y divide-gray-100 shadow "
     id="dropdown"
@@ -60,7 +60,7 @@ const Navbar = () => {
   return (
     <div>
       <header>
-        <nav className="w-screen bg-white border-gray-200 px-4 lg:px-6 py-2.5 sticky">
+        <nav className="w-screen bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex justify-start items-center mb-3 md:mb-0 -gap-3">
               <a href="#" className="flex mr-4  ">
@@ -73,7 +73,7 @@ const Navbar = () => {
                   GrammeAI
                 </span>
               </a>
-              <h1 className="text-center tracking-tighter md:text-sm text-[11px] md:-ml-3 -ml-10 md:mt-3 mt-6">
+              <h1 className="text-center tracking-tighter md:text-sm text-[9px] md:-ml-3 -ml-10 md:mt-3 mt-6">
                 Paraphraser
               </h1>
             </div>
