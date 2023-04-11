@@ -30,7 +30,7 @@ const ParaphraserSection = () => {
                 onClick={() => setCurrentWritingMode(mode)}
                 className={`inline-block w-full p-4 ${
                   currentWritingMode === mode ? "border-b-2 border-blue-400" : ""
-                } bg-gray-50 hover:text-gray-900 hover:bg-gray-100 cursor-pointer`}
+                }  hover:text-gray-900 hover:bg-gray-50 cursor-pointer`}
               >
                 {mode}
               </span>
@@ -97,7 +97,7 @@ const ParaphraserSection = () => {
           </label>
         </div>
         <h1
-         className="text-gray-600 text-sm w-fit px-2  mx-2 bg-opacity-30 rounded-full"><span className="text-green-600">0</span>/500 Characters
+         className="text-gray-700 text-sm w-fit px-2  mx-2 bg-opacity-30 rounded-full"><span className="text-green-600">0</span>/500 Characters
         </h1>
       </section>
 
