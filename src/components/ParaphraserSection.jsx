@@ -17,7 +17,7 @@ const ParaphraserSection = () => {
   };
 
   return (
-    <div className=" md:h-[30rem] h-[37rem] bg-white shadow mt-20 mx-3 md:mx-28 z-50">
+    <div className=" md:h-[30rem] h-[37rem] bg-white shadow  mx-3 md:mx-28 z-50">
       <section className="flex flex-row gap-36 items-center mx-2 border-b border-gray-100">
         <div className="mr-10 ">
           <h1>Modes:</h1>
