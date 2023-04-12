@@ -1,10 +1,10 @@
 import React from 'react'
 
-import ParaphraserSection from '../components/ParaphraserSection'
+import ParaphraserSection from '../components/home/ParaphraserSection'
 
 const Home = () => {
   return (
-    <div>
+    <div className='mt-20'>
         <ParaphraserSection/>
     </div>
   )
