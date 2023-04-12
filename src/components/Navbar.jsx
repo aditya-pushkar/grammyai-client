@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const FloatingBtn = () => {
   return (
@@ -148,17 +149,21 @@ const FloatingBtn = () => {
 const Tools = () => {
   return (
     <div className="flex flex-row w-screen h-10  px-10  gap-3  bg-gray-50 overflow-x-auto scrollbar-hide justify-center items-center grow border-b-2">
+      <Link to="/">
       <div className=" flex flex-col  items-center justify-center   cursor-pointer hover:bg-gray-100  px-2">
-        <i class="ri-book-read-line text-blue-600 text-center"></i>
+        <i className="ri-book-read-line text-blue-600 text-center"></i>
         <h1 className="text-[12px] font -mt-1 text-gray-700">Paraphraser</h1>
       </div>
+      </Link>
 
+      <Link to={"grammar-checker"}>
       <div className=" flex flex-col  items-center justify-center   cursor-pointer hover:bg-gray-100  px-2">
-        <i class="ri-edit-2-line text-red-600 text-center"></i>
+        <i className="ri-edit-2-line text-red-600 text-center"></i>
         <h1 className="text-[12px] font -mt-1 text-gray-700">
           Grammar Checker
         </h1>
       </div>
+      </Link>
     </div>
   );
 };
@@ -224,7 +229,7 @@ const Navbar = () => {
         <nav className="w-screen bg-white border-gray-200 px-4 lg:px-6 py-2.5 ">
           <div className="flex flex-wrap justify-between items-center">
             <div className="flex justify-start items-center mb-3 md:mb-0 -gap-3">
-              <a href="#" className="flex mr-4  ">
+              <Link to={"/"} className="flex mr-4  ">
                 <img
                   src="https://flowbite.s3.amazonaws.com/logo.svg"
                   className="mr-3 h-8"
@@ -233,7 +238,7 @@ const Navbar = () => {
                 <span className=" font-mono self-center text-sm md:text-xl font-bold whitespace-nowrap  text-blue-600">
                   GrammeAI
                 </span>
-              </a>
+              </Link>
               <h1 className="text-center tracking-tighter md:text-sm text-[9px] md:-ml-3 -ml-10 md:mt-3 mt-6">
                 Paraphraser
               </h1>
