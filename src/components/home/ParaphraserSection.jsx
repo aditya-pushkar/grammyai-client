@@ -1,16 +1,38 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const ParaphraserSection = () => {
   const [currentWritingMode, setCurrentWritingMode] = useState("Standard");
+  const [paraphraserInputText, setParaphraserInputText] = useState("")
+  const [totalWords, setTotalWords] = useState(0)
   const modes = [
     "Standard",
-    "Fluent",
-    "Word Changer",
+    "Fluency",
     "Formal",
     "Simple",
     "Creative",
+    "Smarter",
     "Shorten",
+    
   ];
+
+  useEffect(()=>{
+    if(paraphraserInputText){
+      countWords()
+    }
+  }, [paraphraserInputText])
+
+  const countWords = () => {
+    let count = 0
+    const wordsArray =  paraphraserInputText.split(" ")
+    wordsArray.map((words)=>{
+      count +=1
+    })
+    return setTotalWords(count)
+  }
+
+  const handleParaphraserTextChange = (e) => {
+    setParaphraserInputText(e.target.value)
+  }
 
   const handleChangewritingMode = (e) => {
     setCurrentWritingMode(e.target.value);
@@ -18,7 +40,7 @@ const ParaphraserSection = () => {
 
   return (
     <div className="md:h-[31rem] h-[37rem]  bg-white shadow  mx-3 md:mx-28 z-50">
-      <section className="flex flex-row gap-36 items-center mx-2 border-b border-gray-100">
+      <section className="flex flex-row gap-10 items-center mx-2 border-b border-gray-100">
         <div className="mr-10 ">
           <h1>Modes:</h1>
         </div>
@@ -78,6 +100,7 @@ const ParaphraserSection = () => {
             </span> */}
             <textarea
               name="inputText"
+              onChange={handleParaphraserTextChange}
               className="block w-full p-4 border-2 border-gray-100 resize-none h-96 disabled:opacity-60 sm:text-sm md:text focus:outline-none focus:ring-1  focus:border-blue-400"
               placeholder="Unleash your creativity and rephrase your text by choosing from a variety of paraphrasing modes available above. Once you've written down or pasted your text, hit the Paraphrase button situated below to bring your words to life in a fresh new way."
               spellcheck="false"
@@ -100,12 +123,12 @@ const ParaphraserSection = () => {
           <div class="flex flex-row items-center  w-full mb-10  px-3 py-1 gap-24">
             <label
               for="dropzone-file"
-              class="flex flex-col  items-center justify-center   h-8 w-8 border-2 border-blue-500  hover:border-blue-600 rounded-full cursor-pointer bg-transparent"
+              class="flex flex-col  items-center justify-center     hover:border-blue-600 rounded-full cursor-pointer bg-transparent"
             >
               <div class="flex flex-row items-center justify-center gap-3 px-2  ">
                 <svg
                   aria-hidden="true"
-                  class="w-4 h-4  text-blue-500 hover:text-blue-600"
+                  class="w-6 h-6  text-blue-500 hover:text-blue-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -123,7 +146,7 @@ const ParaphraserSection = () => {
               <input id="dropzone-file" type="file" class="hidden" />
             </label>
             <div>
-            <button className="text-sm text-gray-700"><span className="text-green-600">50</span> WORDS</button>
+            <button className="text-sm text-gray-700 font-medium">{totalWords===0? 0 : (totalWords-1)} Words</button>
           </div>
           </div>
           
