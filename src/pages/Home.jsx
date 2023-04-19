@@ -5,7 +5,7 @@ import About from '../components/paraphraser/About'
 
 const Home = () => {
   return (
-    <div className='mt-20'>
+    <div className='mt-10'>
         <ParaphraserSection/>
 
         <div className='mt-96 md:mt-28'>

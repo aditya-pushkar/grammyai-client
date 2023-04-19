@@ -213,6 +213,7 @@ const ParaphraserSection = () => {
                 className="hidden"
               />
             </label>
+            <h1 className="text-[10px] -ml-6 md:-ml-24">text/ txt</h1>
 
             <div>
               <button className="text-sm text-gray-700 font-medium ">
