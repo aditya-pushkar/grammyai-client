@@ -142,7 +142,7 @@ const Navbar = () => {
                   className="mr-3 h-8"
                   alt="GrammyAi Logo"
                 /> */}
-                <span className=" self-center text-sm md:text-2xl font-normal whitespace-nowrap tracking-wide text-blue-600">
+                <span className=" self-center text-xl md:text-2xl font-normal whitespace-nowrap tracking-wide text-blue-600">
                   ScholarAI
                 </span>
               </Link>
