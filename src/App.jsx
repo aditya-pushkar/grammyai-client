@@ -1,8 +1,8 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
-import GrammarChecker from './pages/GrammarChecker'
+import NotFound from './pages/NotFound'
 
 function App() {
 
@@ -11,7 +11,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='grammar-checker' element={<GrammarChecker/>}/>
+        <Route path="/404" element={<NotFound/>} />
+        <Route path="*" element={<Navigate to="404" />} />
       </Routes>
 
     </div>
