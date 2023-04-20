@@ -21,6 +21,7 @@ const ParaphraserSection = () => {
   ];
 
   useEffect(() => {
+    console.log("URL>>>>>>", URL)
     if (paraphraserInputText) {
       countWords();
     }
