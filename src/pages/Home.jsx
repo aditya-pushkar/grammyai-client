@@ -25,7 +25,7 @@ const Home = () => {
         <div className='mt-96 md:mt-28'>
           <About/>
         </div>
-        <footer class="bg-black" aria-labelledby="footer-heading">
+        <footer class="bg-gray-100" aria-labelledby="footer-heading">
   <h2 id="footer-heading" class="sr-only">Footer</h2>
 
   <div class="px-4 py-12 mx-auto bg-gray-100 text-gray-700 max-w-7xl sm:px-6 lg:px-16">
