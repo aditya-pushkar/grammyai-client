@@ -3,9 +3,23 @@ import React from 'react'
 import ParaphraserSection from '../components/paraphraser/ParaphraserSection'
 import About from '../components/paraphraser/About'
 
+
+const SaveToBookmarkBtn = () => {
+  return (
+    <div className='bg-gradient-to-b from-gray-200 to-gray-300 cursor-pointer px-2 py-0.5 mx-3 md:mx-32 my-7'>
+      <p className='text-sm'>Bookmark <span className='text-base'><i class="ri-corner-right-up-line"></i></span></p>
+    </div>
+  )
+}
+
+
 const Home = () => {
   return (
-    <div className='mt-10'>
+    <div className=''>
+
+      <div className='flex w-full justify-end '>
+        <SaveToBookmarkBtn/>
+      </div>
         <ParaphraserSection/>
 
         <div className='mt-96 md:mt-28'>
