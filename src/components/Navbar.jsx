@@ -11,14 +11,19 @@ const FloatingBtn = () => {
     <div className="fixed right-6 bottom-6 group">
       {
         showFloatingBtn&&(
-          <div id="speed-dial-menu-text-outside-button" class="flex flex-col items-center  mb-4 space-y-2">
-          <button type="button" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900  shadow-sm   hover:bg-gray-50  focus:ring-4 focus:ring-gray-300 focus:outline-none ">
-              <svg aria-hidden="true" class="w-6 h-6 mx-auto mt-px" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
-              <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -left-14 top-1/2 ">Feedback</span>
+          <div id="speed-dial-menu-text-outside-button" className="flex flex-col items-center  mb-4 space-y-2">
+          <button type="button" className="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900  shadow-sm   hover:bg-gray-50  focus:ring-4 focus:ring-gray-300 focus:outline-none ">
+            <a href="https://lhd9qt2i35z.typeform.com/to/hR3b2WBS" target="_blank">
+            <svg aria-hidden="true" className="w-6 h-6 mx-auto mt-px" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M15 8a3 3 0 10-2.977-2.63l-4.94 2.47a3 3 0 100 4.319l4.94 2.47a3 3 0 10.895-1.789l-4.94-2.47a3.027 3.027 0 000-.74l4.94-2.47C13.456 7.68 14.19 8 15 8z"></path></svg>
+              <span className="absolute block mb-px text-sm font-medium -translate-y-1/2 -left-14 top-1/2 ">Feedback</span>
+            </a>
+              
           </button>
-          <button type="button" class="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900  shadow-sm   hover:bg-gray-50  focus:ring-4 focus:ring-gray-300 focus:outline-none ">
-          <i class="ri-bug-fill w-6 h-6 mx-auto mt-px "></i>
-              <span class="absolute block mb-px text-sm font-medium -translate-y-1/2 -left-14 top-1/2">Bug </span>
+          <button type="button" className="relative w-[52px] h-[52px] text-gray-500 bg-white rounded-full border border-gray-200 hover:text-gray-900  shadow-sm   hover:bg-gray-50  focus:ring-4 focus:ring-gray-300 focus:outline-none ">
+            <a href="https://lhd9qt2i35z.typeform.com/to/k2nTn64f" target="_blank">
+            <i className="ri-bug-fill w-6 h-6 mx-auto mt-px "></i>
+              <span className="absolute block mb-px text-sm font-medium -translate-y-1/2 -left-14 top-1/2">Bug </span>
+            </a>
           </button>
       </div>
         )
@@ -167,7 +172,7 @@ const Navbar = () => {
                 dataDropdownoggle="dropdown"
               >
                 <span className="sr-only">Open user menu</span>
-                <i class="ri-user-fill px-2 py-2.5 rounded-full ri-lg text-gray-600" />
+                <i className="ri-user-fill px-2 py-2.5 rounded-full ri-lg text-gray-600" />
               </button>
             </div> */}
 
