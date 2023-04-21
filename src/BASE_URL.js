@@ -1,3 +1,3 @@
-const URL = "https://scholar-ai-api.vercel.app"
+const URL = "https://scholar-backend.vercel.app/"
 
 export default URL;
