@@ -48,8 +48,14 @@ const ParaphraserSection = () => {
 
   const handleSubmit = () => {
     setIsWaitingForResult(true);
-    if(totalWords===0) return alert("Please add some words.")
-    if(totalWords>maxWords) return alert("The Word limit is 1000.")
+    if(totalWords===0) {
+      setIsWaitingForResult(false)
+      return alert("Please add some words.")
+    }
+    if(totalWords>maxWords) {
+      setIsWaitingForResult(false)
+      return alert("The Word limit is 1000.")
+    }
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -246,12 +252,12 @@ const ParaphraserSection = () => {
         <span className="w-8 h-8 border-4 border-dashed rounded-full animate-spin"></span>
         Paraphrase
       </button> */}
-
-        <button
+<div className="flex flex-col gap-1 items-center justify-center">
+<button
         onClick={handleSubmit}
           disabled={isWaitingForResult ? true : false}
           type="button"
-          className="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2  inline-flex items-center disabled:bg-opacity-80"
+          className="text-white w-fit bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-700 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2  inline-flex items-center disabled:bg-opacity-80"
         >
           {isWaitingForResult&&(
             <svg
@@ -275,7 +281,11 @@ const ParaphraserSection = () => {
           
           {!isWaitingForResult?"Paraphrase": "Loading...."}
         </button>
+<p className="space-x-2 md:w-96  text-center md:text-[13px] text-[9px] underline text-gray-500 mt-1 ">If you've been waiting for a while, the server is likely busy. Please be patient and know that they're doing their best!</p>
+
+</div>
       </div>
+      
     </div>
   );
 };
