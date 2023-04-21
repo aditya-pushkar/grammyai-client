@@ -69,7 +69,7 @@ const ParaphraserSection = () => {
     fetch(`${URL}/tool/guest-para/`, requestOptions)
       .then(async (response) => {
         const res = await response.json();
-        setOutputInputText(res.output_text);
+        setParaphraserOutputText(res.output_text);
         setIsWaitingForResult(false);
       })
       .catch((error) => {
