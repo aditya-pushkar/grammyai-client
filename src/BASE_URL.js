@@ -1,3 +1,3 @@
-const URL = "https://scholar-backend.vercel.app"
+const URL = "scholarai-api.azurewebsites.net"
 
 export default URL;
