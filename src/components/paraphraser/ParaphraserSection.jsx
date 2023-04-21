@@ -47,8 +47,8 @@ const ParaphraserSection = () => {
   };
 
   const handleSubmit = () => {
-    setParaphraserInputText("")
     setIsWaitingForResult(true);
+    setParaphraserInputText("")
     if (totalWords === 0) {
       setIsWaitingForResult(false);
       return alert("Please add some words.");
