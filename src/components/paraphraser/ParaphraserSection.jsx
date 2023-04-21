@@ -6,7 +6,7 @@ import URL from "../../BASE_URL";
 const ParaphraserSection = () => {
   const [currentWritingMode, setCurrentWritingMode] = useState("Standard");
   const [paraphraserInputText, setParaphraserInputText] = useState("");
-  const [paraphraserOutputText, setOutputInputText] = useState("");
+  const [paraphraserOutputText, setParaphraserOutputText] = useState("");
   const [totalWords, setTotalWords] = useState(0);
   const [maxWords, setMaxWords] = useState(1000);
   const [errorUplodingFile, setErrorUplodingFile] = useState(false);
@@ -48,7 +48,7 @@ const ParaphraserSection = () => {
 
   const handleSubmit = () => {
     setIsWaitingForResult(true);
-    setParaphraserInputText("")
+    setParaphraserOutputText("")
     if (totalWords === 0) {
       setIsWaitingForResult(false);
       return alert("Please add some words.");
