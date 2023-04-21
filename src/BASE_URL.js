@@ -1,3 +1,3 @@
-const URL = "scholarai-api.azurewebsites.net"
+const URL = "https://scholarai-api.azurewebsites.net"
 
 export default URL;
