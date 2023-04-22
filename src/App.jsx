@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 import Navbar from './components/Navbar'
 import Home from './pages/Home'

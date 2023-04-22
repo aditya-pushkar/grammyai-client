@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 import ParaphraserSection from '../components/paraphraser/ParaphraserSection'
 import About from '../components/paraphraser/About'
@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(()=>{
     // Non -intraction event
-    ReactGA.pageview(window.location.pathname)
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Paraphre Tool Page" });
   },[])
   return (
     <div className=''>

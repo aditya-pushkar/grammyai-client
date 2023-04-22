@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
-import ReactGA from 'react-ga'
+import ReactGA from 'react-ga4'
 
 import URL from "../../BASE_URL";
 
@@ -61,7 +61,7 @@ const ParaphraserSection = () => {
     // Send data to google analytics
     ReactGA.event({
       category: currentWritingMode,
-      action: "writing mode action",
+      action: "writing mode ",
       label: "writing mode chosed by user with text length",
       value: totalWords
     })
