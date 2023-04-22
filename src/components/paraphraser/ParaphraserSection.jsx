@@ -7,7 +7,7 @@ import ReactGA from 'react-ga4'
 import TEXT_MODES from "../../helper/textModes";
 
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: context.env.OPENAI_API_KEY,
 });
 delete configuration.baseOptions.headers['User-Agent'];
 const openai = new OpenAIApi(configuration);
