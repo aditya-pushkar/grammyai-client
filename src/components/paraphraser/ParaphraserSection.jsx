@@ -6,14 +6,10 @@ import ReactGA from 'react-ga4'
 // import URL from "../../BASE_URL";
 import TEXT_MODES from "../../helper/textModes";
 
-function onRequest(context) {
-  console.log("ON REQUEST IS RUNNING !!!!")
-	return context.env.OPENAI_API_KEY
-}
-
 const configuration = new Configuration({
-  apiKey: onRequest()
+  apiKey: "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"
 });
+
 delete configuration.baseOptions.headers['User-Agent'];
 const openai = new OpenAIApi(configuration);
 
