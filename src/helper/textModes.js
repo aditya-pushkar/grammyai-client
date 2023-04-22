@@ -32,6 +32,12 @@ const TEXT_MODES = {
         'PRESENCE_PENALTY' :0.0,
         'INITIAL_PROMPT': `Please paraphrase this text in a very creative way, ${NOTE}: `
     },
+    'Creative Pro' :{
+        'TEMPERATURE': 1.4,
+        'FREQUENCY_PENALTY': 0.0,
+        'PRESENCE_PENALTY' :0.0,
+        'INITIAL_PROMPT': `Please paraphrase this text in a very creative way, ${NOTE}: `
+    },
     'Smarter' :{
         'TEMPERATURE': 0.7,
         'FREQUENCY_PENALTY': 0.5,

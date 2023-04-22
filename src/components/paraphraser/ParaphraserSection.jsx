@@ -27,6 +27,7 @@ const ParaphraserSection = () => {
     "Formal",
     "Simple",
     "Creative",
+    "Creative Pro",
     "Smarter",
   ];
 
