@@ -41,7 +41,7 @@ const Home = () => {
         <span  className="mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer">@scholarai</span>. Since 2023
       </span>
 
-      <a 
+      {/* <a 
       href='https://twitter.com/aditya_pushkar_'
       target="_blank"
       className='text-sm text-gray-700 cursor-pointer'>
@@ -49,7 +49,7 @@ const Home = () => {
         <span className='hover:underline'>
         @adityapushkar
         </span>
-      </a>
+      </a> */}
     </div>
   </div>
 </footer>
