@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
+import {Configuration, OpenAIApi} from 'openai';
 import ReactGA from 'react-ga4'
 
-import URL from "../../BASE_URL";
+// import URL from "../../BASE_URL";
+import TEXT_MODES from "../../helper/textModes";
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+delete configuration.baseOptions.headers['User-Agent'];
+const openai = new OpenAIApi(configuration);
 
 const ParaphraserSection = () => {
   const [currentWritingMode, setCurrentWritingMode] = useState("Standard");
@@ -47,7 +55,7 @@ const ParaphraserSection = () => {
     setCurrentWritingMode(e.target.value);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async() => {
     setIsWaitingForResult(true);
     setParaphraserOutputText("")
     if (totalWords === 0) {
@@ -65,25 +73,24 @@ const ParaphraserSection = () => {
       label: "writing mode chosed by user with text length",
       value: totalWords
     })
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        input_text: paraphraserInputText,
-        total_input_tokens: totalWords,
-        text_mode: currentWritingMode,
-      }),
-    };
-    fetch(`${URL}/tool/guest-para/`, requestOptions)
-      .then(async (response) => {
-        const res = await response.json();
-        setParaphraserOutputText(res.output_text);
-        setIsWaitingForResult(false);
-      })
-      .catch((error) => {
-        alert("Something went wrong, please try again later.");
-        return setIsWaitingForResult(false);
+    try{
+      const response = await openai.createCompletion({
+        model: "text-davinci-002",
+        prompt: TEXT_MODES[currentWritingMode]['INITIAL_PROMPT'] + paraphraserInputText,
+        temperature: TEXT_MODES[currentWritingMode]['TEMPERATURE'],
+        max_tokens: maxWords+200,
+        n: 1,
+        frequency_penalty: TEXT_MODES[currentWritingMode]['FREQUENCY_PENALTY'],
+        presence_penalty: TEXT_MODES[currentWritingMode]['PRESENCE_PENALTY']
       });
+  
+      const paraphrasedText = response.data.choices[0].text.trim().replace(/\s+/g, ' ')
+      setIsWaitingForResult(false)
+      setParaphraserOutputText(paraphrasedText)
+    }catch{
+      setIsWaitingForResult(false)
+      return alert("Something went wrong, please try again later.")
+    }
   };
 
   const showFile = () => {
