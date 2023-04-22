@@ -35,11 +35,11 @@ const FloatingBtn = () => {
         dataDialToggle="speed-dial-menu-default"
         ariaControls="speed-dial-menu-default"
         ariaExpanded="false"
-        className="flex items-center justify-center text-white bg-blue-600 rounded-full md:w-10 md:h-10 w-14 h-14 hover:bg-blue-800  focus:ring-4 focus:ring-blue-300 focus:outline-none "
+        className="flex items-center justify-center text-white bg-blue-600 rounded-full md:w-10 md:h-10 w-9 h-9 hover:bg-blue-800  focus:ring-4 focus:ring-blue-300 focus:outline-none "
       >
         <svg
           ariaHidden="true"
-          className="w-8 h-8 transition-transform group-hover:rotate-45"
+          className="w-6 h-6 md:w-7 md:h-7 transition-transform group-hover:rotate-45"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
