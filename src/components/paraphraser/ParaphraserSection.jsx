@@ -12,7 +12,7 @@ function onRequest(context) {
 }
 
 const configuration = new Configuration({
-  apiKey: onRequest
+  apiKey: onRequest()
 });
 delete configuration.baseOptions.headers['User-Agent'];
 const openai = new OpenAIApi(configuration);
