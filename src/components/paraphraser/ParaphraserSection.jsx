@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
+import ReactGA from 'react-ga'
 
 import URL from "../../BASE_URL";
 
@@ -57,6 +58,13 @@ const ParaphraserSection = () => {
       setIsWaitingForResult(false);
       return alert("The Word limit is 1000.");
     }
+    // Send data to google analytics
+    ReactGA.event({
+      category: currentWritingMode,
+      action: "writing mode action",
+      label: "writing mode chosed by user with text length",
+      value: totalWords
+    })
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

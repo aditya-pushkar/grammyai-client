@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import ReactGA from 'react-ga'
 
 import ParaphraserSection from '../components/paraphraser/ParaphraserSection'
 import About from '../components/paraphraser/About'
@@ -14,6 +15,11 @@ const SaveToBookmarkBtn = () => {
 
 
 const Home = () => {
+
+  useEffect(()=>{
+    // Non -intraction event
+    ReactGA.pageview(window.location.pathname)
+  },[])
   return (
     <div className=''>
 
