@@ -4,7 +4,7 @@ const About = () => {
   const MODES = [
     {
       mode: "Standard",
-      des: "Paraphrases your text to make it easier to understand.",
+      des: "Paraphrases your content to make it easier to understand.",
       iconClass: "",
     },
     {
@@ -14,17 +14,22 @@ const About = () => {
     },
     {
       mode: "Formal",
-      des: "Transforms your text into more professional language suitable for formal writing.",
+      des: "Transforms your content into more professional language suitable for formal writing.",
       iconClass: "",
     },
     {
       mode: "Simple",
-      des: "Simplifies your text for an easy-to-read version.",
+      des: "Simplifies your content for an easy-to-read version.",
       iconClass: "",
     },
     {
       mode: "Creative",
       des: "Adds a touch of creativity to your writing.",
+      iconClass: "",
+    },
+    {
+      mode: "Creative Pro",
+      des: "Rewrite your whole content while maintaining the originality and intent of the content.",
       iconClass: "",
     },
     {
@@ -51,18 +56,42 @@ const About = () => {
               to suit your needs:
             </p>
           </div>
-          <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0">
-            {MODES.map((mode, key) => (
-              <div key={key}>
-                {/* <div className="flex justify-center items-center mb-4 w-10 h-10 rounded-full lg:h-10 lg:w-10 bg-gradient-to-b from-blue-500 to-blue-600">
-                <svg className="w-5 h-5 text-white lg:w-5 lg:h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 0l-2 2a1 1 0 101.414 1.414L8 10.414l1.293 1.293a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-            </div> */}
-                <h3 className="mb-2 text-xl font-bold text-gray-700">
-                  {mode.mode}
-                </h3>
-                <p className="text-gray-500 ">{mode.des}</p>
-              </div>
-            ))}
+
+          <div className=" flex  w-80 overflow-x-scroll md:w-full md:items-center md:justify-center">
+           <div className="">
+           <table className="overflow-x-auto min-w-full divide-y-2 divide-gray-200 text-sm w-10">
+              <thead className="text-center ">
+                <tr>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900 w-10">
+                    Paraphrasing Mode
+                  </th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Description
+                  </th>
+                  <th className="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                    Price
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody className="divide-y divide-gray-200 ">
+                {MODES.map((mode, key) => (
+                  <tr className="odd:bg-gray-50" key={key}>
+                    <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-700">
+                      {mode.mode}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      {mode.des}
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-2 text-gray-700">
+                      Free
+                    </td>
+
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+           </div>
           </div>
 
           <div className="mt-16 md:text-3xl text-2xl tracking-tight font text-blue-600 underline">
@@ -80,7 +109,9 @@ const About = () => {
             </div>
             <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-2 md:gap-12 md:space-y-0">
               <div>
-                <h3 className="mb-2 text-xl font-bold text-gray-700">Save time</h3>
+                <h3 className="mb-2 text-xl font-bold text-gray-700">
+                  Save time
+                </h3>
                 <p className="text-gray-500 ">
                   Our paraphrasing tool can rephrase your writing in seconds.
                 </p>
@@ -102,12 +133,18 @@ const About = () => {
                 </h3>
                 <p className="text-gray-500 ">
                   Our tool is accessible online, so you can use it from
-                  anywhere, at any time. <span className="underline">All the premium features offered by
-                  other sites are provided for free on our site, including:</span>
+                  anywhere, at any time.{" "}
+                  <span className="underline">
+                    All the premium features offered by other sites are provided
+                    for free on our site, including:
+                  </span>
                 </p>
                 <div className="px-3 mt-3 text-gray-500 space-y-1">
-                <dl>Multiple modes to choose from.</dl>
-                  <dl>Advanced AI algorithms for accurate and natural-sounding results.</dl>
+                  <dl>Multiple modes to choose from.</dl>
+                  <dl>
+                    Advanced AI algorithms for accurate and natural-sounding
+                    results.
+                  </dl>
                   <dl>Unlimited usage with no hidden fees or charges.</dl>
                 </div>
               </div>
