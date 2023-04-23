@@ -70,8 +70,8 @@ const ParaphraserSection = () => {
     }
     // Send data to google analytics
     ReactGA.event({
-      category: currentWritingMode,
-      action: "writing mode ",
+      category: "Writing Mode",
+      action: currentWritingMode,
       label: "writing mode chosed by user with text length",
       value: totalWords
     })
