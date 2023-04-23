@@ -18,7 +18,7 @@ const Home = () => {
 
   useEffect(()=>{
     // Non -intraction event
-    ReactGA.send({ hitType: "pageview", page: "/", title: "Paraphre Tool Page" });
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Paraphrase Tool Page" });
   },[])
   return (
     <div className=''>
