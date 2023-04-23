@@ -5,7 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import NotFound from './pages/NotFound'
 
-const TRACKING_ID = "UA-120619823-2"
+const TRACKING_ID = "UA-265621307-1"
 ReactGA.initialize(TRACKING_ID)
 
 function App() {
