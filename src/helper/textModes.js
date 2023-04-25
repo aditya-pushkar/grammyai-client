@@ -1,5 +1,5 @@
 // NOTE = "and don't shorten or summarize the text and maintail overall lenght of text."
-const NOTE = "and maintain overall length of text"
+const NOTE = "and maintain overall length of text, before returning the output make sure all the grammar should be correct"
 
 const TEXT_MODES = {
     'Standard': {
@@ -35,7 +35,7 @@ const TEXT_MODES = {
     'Creative Pro' :{
         'TEMPERATURE': 1.4,
         'FREQUENCY_PENALTY': 0.0,
-        'PRESENCE_PENALTY' :0.0,
+        'PRESENCE_PENALTY' :0.5,
         'INITIAL_PROMPT': `Please paraphrase this text in a very creative way, ${NOTE}: `
     },
     'Smarter' :{
@@ -48,6 +48,12 @@ const TEXT_MODES = {
         'TEMPERATURE': 0.5,
         'FREQUENCY_PENALTY': 0.0,
         'PRESENCE_PENALTY' :0.0,
+        'INITIAL_PROMPT': `Please paraphrase this text in such a way that the more detail and depth get added into the text about the topic to increase the sentence lenght, the length of the text should be increase by minimum of 200 percent, ${NOTE}: `
+    },
+    'Humanizer' :{
+        'TEMPERATURE': 1.4,
+        'FREQUENCY_PENALTY': 0.0,
+        'PRESENCE_PENALTY' :0.5,
         'INITIAL_PROMPT': `Please paraphrase this text in such a way that the more detail and depth get added into the text about the topic to increase the sentence lenght, the length of the text should be increase by minimum of 200 percent, ${NOTE}: `
     }
 }
