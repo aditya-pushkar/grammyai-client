@@ -54,7 +54,7 @@ const TEXT_MODES = {
         'TEMPERATURE': 1.4,
         'FREQUENCY_PENALTY': 0.0,
         'PRESENCE_PENALTY' :0.5,
-        'INITIAL_PROMPT': `Please paraphrase this text in such a way that the more detail and depth get added into the text about the topic to increase the sentence lenght, the length of the text should be increase by minimum of 200 percent, ${NOTE}: `
+        'INITIAL_PROMPT': `Please paraphrase this but tone of voice and intent of the overall output text should be same as the tone of voice and intent of the input text, ${NOTE}: `
     }
 }
 
