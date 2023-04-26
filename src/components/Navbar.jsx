@@ -68,14 +68,14 @@ const Tools = () => {
       </div>
       </Link>
 
-      {/* <Link to={"grammar-checker"}>
+      <Link to={"writergpt"}>
       <div className=" flex flex-col  items-center justify-center   cursor-pointer hover:bg-gray-100  px-2">
-        <i className="ri-edit-2-line text-red-600 text-center"></i>
+        <i className="ri-quill-pen-line text-emerald-500 text-center"></i>
         <h1 className="text-[12px] font -mt-1 text-gray-700">
-          Grammar Checker
+          Writergpt
         </h1>
       </div>
-      </Link> */}
+      </Link>
     </div>
   );
 };
@@ -151,9 +151,9 @@ const Navbar = () => {
                   ScholarAI
                 </span>
               </Link>
-              <h1 className="text-center tracking-tighter md:text-sm text-[9px] md:-ml-3 -ml-10 md:mt-3 mt-6">
+              {/* <h1 className="text-center tracking-tighter md:text-sm text-[9px] md:-ml-3 -ml-10 md:mt-3 mt-6">
                 Paraphraser
-              </h1>
+              </h1> */}
             </div>
             {/* <div className="flex items-center  lg:order-2">
               <button
@@ -176,7 +176,7 @@ const Navbar = () => {
               </button>
             </div> */}
 
-            {/* <h1 className="bg-gradient-to-b from-blue-500 to-blue-600 px-2 py-1  text-sm text-gray-100  cursor-pointer">Experimantal</h1> */}
+            <h1 className="bg-gradient-to-b from-blue-600 to-blue-700 px-2 py-1  text-sm text-gray-100  cursor-pointer">Experimantal</h1> 
 
           </div>
         </nav>
