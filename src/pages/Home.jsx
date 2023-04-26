@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react'
+import { Helmet } from 'react-helmet-async'
 import ReactGA from 'react-ga4'
 
 import ParaphraserSection from '../components/paraphraser/ParaphraserSection'
@@ -21,40 +22,52 @@ const Home = () => {
     ReactGA.send({ hitType: "pageview", page: "/", title: "Paraphrase Tool Page" });
   },[])
   return (
+    <>
+    <Helmet>
+    <title>Paraphrasing Tool - Scholar AI Free Paraphrasing Tool Multiple Modes Available</title>
+    <meta
+      name="description"
+      content="Our free paraphrasing tool offers multiple modes to suit your needs. Save time, improve your writing, and maintain originality with our easy-to-use tool."
+      data-rm="true"
+    />
+    <link rel="canonical" href="/"/>
+    </Helmet>
     <div className=''>
 
-      <div className='flex w-full justify-end '>
-        <SaveToBookmarkBtn/>
-      </div>
-        <ParaphraserSection/>
+<div className='flex w-full justify-end '>
+  <SaveToBookmarkBtn/>
+</div>
+  <ParaphraserSection/>
 
-        <div className='mt-96 md:mt-28'>
-          <About/>
-        </div>
-        <footer className="bg-gray-100" aria-labelledby="footer-heading">
-  <h2 id="footer-heading" className="sr-only">Footer</h2>
-
-  <div className="px-4 py-12 mx-auto bg-gray-100 text-gray-700 max-w-7xl sm:px-6 lg:px-16">
-    <div className="flex flex-col flex-wrap items-center lg:justify-center">
-      <span className="mt-2 text-sm font-light text-gray-500">
-        Copyright © 2023 - Present
-        <span  className="mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer">@scholarai</span>. Since 2023
-      </span>
-
-      {/* <a 
-      href='https://twitter.com/aditya_pushkar_'
-      target="_blank"
-      className='text-sm text-gray-700 cursor-pointer'>
-        <span><i className="ri-twitter-fill text-blue-600"></i></span>
-        <span className='hover:underline'>
-        @adityapushkar
-        </span>
-      </a> */}
-    </div>
+  <div className='mt-96 md:mt-28'>
+    <About/>
   </div>
+  <footer className="bg-gray-100" aria-labelledby="footer-heading">
+<h2 id="footer-heading" className="sr-only">Footer</h2>
+
+<div className="px-4 py-12 mx-auto bg-gray-100 text-gray-700 max-w-7xl sm:px-6 lg:px-16">
+<div className="flex flex-col flex-wrap items-center lg:justify-center">
+<span className="mt-2 text-sm font-light text-gray-500">
+  Copyright © 2023 - Present
+  <span  className="mx-2 text-wickedblue hover:text-gray-500" rel="noopener noreferrer">@scholarai</span>. Since 2023
+</span>
+
+{/* <a 
+href='https://twitter.com/aditya_pushkar_'
+target="_blank"
+className='text-sm text-gray-700 cursor-pointer'>
+  <span><i className="ri-twitter-fill text-blue-600"></i></span>
+  <span className='hover:underline'>
+  @adityapushkar
+  </span>
+</a> */}
+</div>
+</div>
 </footer>
 
-    </div>
+</div>
+    </>
+    
   )
 }
 
