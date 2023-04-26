@@ -13,7 +13,7 @@ const ContentRewriter = () => {
   return (
     <>
     <Helmet>
-      <title>Humanizer - Make your content plagiarize free</title>
+      <title>WriterGpt - Make your content plagiarize free</title>
       <meta
       name="description"
       content="Make your content plagiarism free, Your content should be reflective of you and your brand. make sure that your tone is personable, and that your content is free of any plagiarism."
