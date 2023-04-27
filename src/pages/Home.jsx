@@ -24,10 +24,16 @@ const Home = () => {
   return (
     <>
     <Helmet>
-    <title>Paraphrasing Tool - Scholar AI Free Paraphrasing Tool Multiple Modes Available</title>
+    {/* <title>Paraphrasing Tool - Scholar AI Free Paraphrasing Tool Multiple Modes Available</title>
     <meta
       name="description"
       content="Our free paraphrasing tool offers multiple modes to suit your needs. Save time, improve your writing, and maintain originality with our easy-to-use tool."
+      data-rm="true"
+    /> */}
+    <title>Scholar AI - The Tool Set For Copywriters</title>
+    <meta
+      name="description"
+      content="Scholar AI is a toolkit designed to help copywriters create better content faster."
       data-rm="true"
     />
     <link rel="canonical" href="/"/>
