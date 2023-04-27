@@ -34,7 +34,6 @@ const Home = () => {
     <meta
       name="description"
       content="Scholar AI is a toolkit designed to help copywriters create better content faster."
-      data-rm="true"
     />
     <link rel="canonical" href="/"/>
     </Helmet>
