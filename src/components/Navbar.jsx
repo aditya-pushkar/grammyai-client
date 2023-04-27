@@ -176,7 +176,7 @@ const Navbar = () => {
               </button>
             </div> */}
 
-            <h1 className="bg-gradient-to-b from-blue-600 to-blue-700 px-2 py-1  text-sm text-gray-100  cursor-pointer">Experimantal</h1> 
+            {/* <h1 className="bg-gradient-to-b from-blue-600 to-blue-700 px-2 py-1  text-sm text-gray-100  cursor-pointer">Experimantal</h1>  */}
 
           </div>
         </nav>
