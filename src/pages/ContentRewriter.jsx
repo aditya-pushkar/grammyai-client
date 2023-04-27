@@ -8,7 +8,7 @@ import ContentRewriterSection from '../components/content-rewriter/ContentRewrit
 const ContentRewriter = () => {
   useEffect(()=>{
     // Non -intraction event
-    ReactGA.send({ hitType: "pageview", page: "/humanizer", title: "Make your content plagiazise free" });
+    ReactGA.send({ hitType: "pageview", page: "/writergpt", title: "Make your content plagiazise free" });
   },[])
   return (
     <>
