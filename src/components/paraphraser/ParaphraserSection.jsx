@@ -7,7 +7,7 @@ import ReactGA from 'react-ga4'
 import TEXT_MODES from "../../helper/textModes";
 
 const configuration = new Configuration({
-  apiKey: "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"
+  apiKey: "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"
 });
 
 delete configuration.baseOptions.headers['User-Agent'];
