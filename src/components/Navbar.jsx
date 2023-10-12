@@ -68,14 +68,14 @@ const Tools = () => {
       </div>
       </Link>
 
-      <Link to={"writergpt"}>
+      {/* <Link to={"writergpt"}>
       <div className=" flex flex-col  items-center justify-center   cursor-pointer hover:bg-gray-100  px-2">
         <i className="ri-quill-pen-line text-emerald-500 text-center"></i>
         <h1 className="text-[12px] font -mt-1 text-gray-700">
           Writergpt
         </h1>
       </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };
